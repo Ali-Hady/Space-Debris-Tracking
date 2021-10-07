@@ -28,14 +28,14 @@ function create_debris(type, name, long, lat, h) {
 }
 
 function drawDebris() {
-  const getData = async () => {
-  const response = await fetch('https://mind-gravity-api.herokuapp.com/');
-  const debrisData = await response.json(); //extract JSON from the http response
-  // do something with myJson
+  let getData = async () => {
+  let response = await fetch('https://mind-gravity-api.herokuapp.com/');
+  let debrisData = await response.json(); //extract JSON from the http response
+  return debrisData;
 }
 
 
-//let debrisData = JSON.parse(data);
+let debrisData = getData();
 
 for (let key in debrisData) {
   for (let debris in debrisData[key]) {
