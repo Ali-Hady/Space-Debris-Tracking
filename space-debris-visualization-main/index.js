@@ -29,7 +29,7 @@ function create_debris(type, name, long, lat, h) {
 
 function drawDebris() {
   const getData = async () => {
-  const response = await fetch('http://example.com/movies.json');
+  const response = await fetch('https://mind-gravity-api.herokuapp.com/');
   const debrisData = await response.json(); //extract JSON from the http response
   // do something with myJson
 }
